@@ -33,12 +33,6 @@ public:
 	{
 		return point.ID;
 	}
-
-	void print_coord()
-	{
-		cout << "x = " << x << endl;
-		cout << "y = " << y << endl;
-	}
 };
 int Point::Count = 0;
 
