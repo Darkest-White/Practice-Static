@@ -29,9 +29,15 @@ public:
 		return Count;
 	}
 
-	int get_id()
+	static int get_id(Point& point)
 	{
-		return ID;
+		return point.ID;
+	}
+
+	void print_coord()
+	{
+		cout << "x = " << x << endl;
+		cout << "y = " << y << endl;
 	}
 };
 int Point::Count = 0;
@@ -43,9 +49,9 @@ int main()
 	Point p2(20, 20);
 	Point p3(30, 30);
 
-	cout << p1.get_id() << endl;
-	cout << p2.get_id() << endl;
-	cout << p3.get_id() << endl;
+	cout << Point::get_id(p1) << endl;
+	cout << Point::get_id(p2) << endl;
+	cout << Point::get_id(p3) << endl;
 
 	cout << Point::get_Count() << endl;
 }
